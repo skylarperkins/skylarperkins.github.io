@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #052065;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+header, h1 {
+    background-color: #112055;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+#gameContainer {
+    position: relative;
+    flex-grow: 1;
+    background-color: #3366c0;
+    border: 2px solid #174487;
+}
+
+#player {
+    position: absolute;
+    bottom: 10px;
+    left: 180px;
+}
+
+.fallingObject {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.controlButtons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #112055;
+}
+
+.controlButtons button {
+    background-color: #2142a6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.controlButtons button:active {
+    background-color: #174487;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
